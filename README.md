@@ -42,7 +42,7 @@ sequelize db:seed:all
 ```
 
 ### Relations
-
+![image](https://user-images.githubusercontent.com/10147928/127766066-442fc354-3968-4f3c-8d23-997271000ed2.png)
 #### Country Migration
 ```javascript
 'use strict'
@@ -112,7 +112,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-			// Foreign Key
+      // Foreign Key
       countryId: {
         type: Sequelize.INTEGER,
         references: {
@@ -147,7 +147,7 @@ module.exports = (sequelize, DataTypes) => {
   class CapitalCity extends Model {
     static associate (models) {
       this.belongsTo(models.Country, {
-			// Foreign Key
+      // Foreign Key
         foreignKey: {
           name: 'countryId'
         }
